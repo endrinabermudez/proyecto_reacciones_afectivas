@@ -1,0 +1,10 @@
+Actividad: Diseño y creación de una base de datos relacional para el estudio de respuestas afectivas.
+
+Objetivo: Implementar una base de datos que relacione la información de usuarios con sus respuestas emocionales registradas temporalmente.
+
+Instrucciones: Se debe diseñar y crear una base de datos que contenga tres tablas con las siguientes especificaciones:
+
+Tabla usuarios: Debe almacenar datos personales comunes. Incluir como mínimo un identificador único, nombre, correo electrónico y fecha de nacimiento.
+Tabla reacciones_afectivas: Debe almacenar dimensiones afectivas. Incluir un identificador único, un campo para la valencia y otro para la activación (ambos valores numéricos).
+Tabla registros_afectivos: Debe actuar como tabla intermedia para relacionar a los usuarios con sus reacciones. Debe contener los identificadores de las tablas anteriores como claves foráneas, un campo de tipo fecha y hora (datetime) para el registro del evento y un identificador propio como clave primaria.
+Deben escribir las sentencias SQL necesarias para crear la base de datos y sus respectivas tablas, asegurando la integridad referencial mediante el uso correcto de claves primarias y foráneas.
