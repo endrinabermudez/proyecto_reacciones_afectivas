@@ -17,6 +17,8 @@ fecha_hora DATETIME,
 FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
 FOREIGN KEY (id_reaccion) REFERENCES reacciones_afectivas(id_reaccion
 
+ALTER TABLE nombre_tabla
+RENAME COLUMN nombre_viejo TO nombre
 
 //Create table usuarios (cedula int(100) PRIMARY KEY, Nombre varchar(100), email varchar(100), fecha_nac date);
 
@@ -41,3 +43,21 @@ TABLA REGISTROS AFECTIVOS
 0            1  2026-06-04 09:15:00           1            1
 1            2  2026-06-04 11:30:00           2            2
 2            3  2026-06-04 14:45:00           3            3
+
+
+
+
+
+""" cursor.execute("""
+UPDATE registros_afectivos
+SET fecha_hora = ?, id_usuario = ?, id_reaccion = ?
+WHERE id_registro = ?
+""", ("2024-06-01 11:00:00", 5, 2, 5))
+
+cursor.execute("""
+UPDATE registros_afectivos
+SET fecha_hora = ?, id_usuario = ?, id_reaccion = ?
+WHERE id_registro = ?
+""", ("2024-06-01 12:00:00", 6, 3, 6)) """
+
+conn.commit()
